@@ -20,7 +20,7 @@ export const authOptions = {
               sameSite: "lax",
               path: "/",
               httpOnly: true,
-              encode: () => nextAuthUrl,
+              encode: () => process.env.NEXTAUTH_URL,
               secure: true,
           },
       },
