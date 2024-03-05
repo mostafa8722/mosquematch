@@ -6,8 +6,9 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      redirectUri: "https://www.mosquematch.com/api/auth/callback/google",
+      //redirectUri: "https://www.mosquematch.com/api/auth/callback/google",
+
     }),
   ],
-  secret: process.env.JWT_SECRET,
+  secret: "Noe0oTGEgDaJaW30EvzAcdbOAlqnr71K91Cfitr9LQQ=",
 });
