@@ -10,4 +10,16 @@ export default NextAuth({
     }),
   ],
   secret: process.env.JWT_SECRET,
+  cookies: {
+    callbackUrl: {
+        name: `__Secure-next-auth.callback-url`,
+        options: {
+            sameSite: "lax",
+            path: "/",
+            httpOnly: true,
+            encode: () => process.env.NEXTAUTH_URL,
+            secure: true,
+        },
+    },
+},
 });
