@@ -11,7 +11,7 @@ export const authOptions = {
       }),
   
   ],
-  debug: process.env.NODE_ENV === "development",
+
   secret: process.env.NEXT_AUTH_SECRET ,
   cookies: {
       callbackUrl: {
